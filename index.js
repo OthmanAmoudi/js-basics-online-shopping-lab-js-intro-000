@@ -23,9 +23,9 @@ function viewCart() {
   // write your code here
   function viewCart() {
     // write your code here
-    if (cart.length === 0){
-      console.log("Your shopping cart is empty.");
-    }
+    // if (cart.length === 0){
+    //   console.log("Your shopping cart is empty.");
+    // }
     var items =[];
     for(var i=0;i<cart.length;i++){
       var currentObject = cart[i];
@@ -35,6 +35,9 @@ function viewCart() {
     }
     var info = "In your cart, you have ";
     switch (cart.length){
+      case 0:
+      console.log("Your shopping cart is empty.");
+      break;
        case 1:
         console.log(info+items+".");
         break;
