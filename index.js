@@ -49,7 +49,7 @@ function viewCart() {
         var lastItem = items[index];
         items.pop();
         items = items.join(', ');
-        console.log(info+items+" and "+lastItem+".");
+        console.log(info+items+", and "+lastItem+".");
     }
   }
 
