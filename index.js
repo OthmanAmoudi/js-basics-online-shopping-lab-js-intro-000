@@ -60,7 +60,7 @@ function total() {
   for(var i=0;i<cart.length;i++){
     var currentObject = cart[i];
     for(var key in currentObject){
-      total + = currentObject[key] ;
+      total += currentObject[key] ;
     }
   }
   return total;
