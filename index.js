@@ -26,7 +26,7 @@ function viewCart() {
     if (cart.length === 0){
       console.log("Your shopping cart is empty.");
     }
-    
+
     var items =[];
     for(var i=0;i<cart.length;i++){
       var currentObject = cart[i];
@@ -35,7 +35,7 @@ function viewCart() {
       }
     }
     var info = "In your cart, you have ";
-    
+
     switch (cart.length){
        case 1:
         console.log(info+items+".");
@@ -44,20 +44,13 @@ function viewCart() {
         items = items.join(' and ');
         console.log(info+items+".");
         break;
-       // case 3:
-       //  var index = cart.length - 1;
-       //  var lastItem = items[index];
-       //  items.pop();
-       //  items = items.join(', ');
-       //  console.log(info+items+" and "+lastItem+".");
-       //  break;
       default:
         var index = cart.length - 1;
         var lastItem = items[index];
         items.pop();
         items = items.join(', ');
         console.log(info+items+" and "+lastItem+".");
-        
+
     }
   }
 }
