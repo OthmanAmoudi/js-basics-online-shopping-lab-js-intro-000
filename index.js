@@ -21,28 +21,45 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-if (cart.length === 0){
-  console.log("Your shopping cart is empty.")
-}
-var items =[];
-for(var i=0;i<cart.length;i++){
-  var currentObject = cart[i]
-  for(var key in currentObject){
-    items.push(key+" at $"+currentObject[key]);
+  function viewCart() {
+    // write your code here
+    if (cart.length === 0){
+      console.log("Your shopping cart is empty.");
+    }
+    
+    var items =[];
+    for(var i=0;i<cart.length;i++){
+      var currentObject = cart[i];
+      for(var key in currentObject){
+        items.push(key+" at $"+currentObject[key]);
+      }
+    }
+    var info = "In your cart, you have ";
+    
+    switch (cart.length){
+       case 1:
+        console.log(info+items+".");
+        break;
+       case 2:
+        items = items.join(' and ');
+        console.log(info+items+".");
+        break;
+       // case 3:
+       //  var index = cart.length - 1;
+       //  var lastItem = items[index];
+       //  items.pop();
+       //  items = items.join(', ');
+       //  console.log(info+items+" and "+lastItem+".");
+       //  break;
+      default:
+        var index = cart.length - 1;
+        var lastItem = items[index];
+        items.pop();
+        items = items.join(', ');
+        console.log(info+items+" and "+lastItem+".");
+        
+    }
   }
-}
-var info = "In your cart, you have ";
-if(cart.length === 1){
-  console.log(info + items+".");
-}
-if(cart.length === 2){
-  console.log(info+ items[0]+" and "+items[1]+'.');
-}
-else{
- // var lastItem = items[items.length-1];
-  cosole.log("Fuk u");
-}
-
 }
 
 function total() {
